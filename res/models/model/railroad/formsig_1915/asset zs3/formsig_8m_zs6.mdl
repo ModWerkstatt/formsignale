@@ -1,0 +1,46 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {	
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/zsa_lod0.msh",
+						name = "Zs 1",
+						transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.4, 0, 3.852, 1, },
+					},
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/ZSA_Schirm_quadrat_lod0.msh",
+						name = "Zs 1",
+						transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0.35, 0, 3.872, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1948,
+			yearTo = 1959,
+		},
+	},
+	version = 1,
+}
+end

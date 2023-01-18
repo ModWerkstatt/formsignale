@@ -1,0 +1,140 @@
+﻿local letters = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",}
+local numbers = {"","","1","2","3","4","5","6","7","8","9",}
+function data()
+return {
+	type = "ASSET_TRACK",
+	description = {
+		name = _("formsignal_signalnummer"),
+		description = _("formsignal_signalnummer_desc")
+	},
+	availability = {
+		yearFrom = 1915,
+		yearTo = 1959,
+	},
+	buildMode = "MULTI",
+	categories = { "MW Signal Assets" },
+	order = 1,
+	skipCollision = true,
+	autoRemovable = false,
+
+	params = {	
+		{
+			key = "autoNumber",
+			name = _("Automatische Nummern"),
+			values = { _("ja"), _("nein") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_autoNumber"),
+		},
+		{
+			key = "signalPoleType",
+			name = _("Masttyp"),
+			values = { _("4 m"), _("6 m"), _("8 m"), _("10 m"), _("12 m"), _("Signalbrücke") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_masttyp"),
+		},
+		{
+			key = "signalWidh",
+			name = _("Signalbreite"),
+			values = { _("breit"), _("schmal") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_signalwidh"),
+		},
+		{
+			key = "signalPosition",
+			name = _("Standort"),
+			values = { _("Rechts"), _("Links") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_position"),
+		},
+		{
+			key = "signaldistance",
+			name = _("Verschub für Signal Distance Mod"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_signalddistancemod"),
+		},
+	},
+
+	updateFn = function(params)
+		local result = {}
+		result.models =  {}	
+		result.labelText =  {}
+		result.groundFaces = { }
+		
+		local xPosition = 0
+		local zPosition = 0
+		local yPosition = 0
+		local xPositionHalter = 0
+		local scalefactor = 1
+		local signalDistance = 0
+		
+		
+		if params.signalPosition == 0 then
+			yPosition = 2.15
+		elseif params.signalPosition == 1 then
+			yPosition = -2.55
+		end
+		
+		
+		if params.signaldistance == 0 then
+			signalDistance = 0			
+		elseif params.signaldistance == 1 then
+			signalDistance = -7.988
+		end
+		
+		
+		if (params.signalPoleType == 0 or params.signalPoleType == 1) then	
+				zPosition = 2.03
+				xPosition = 0.17
+		elseif (params.signalPoleType == 2 or params.signalPoleType == 3) then	
+			if params.signalWidh == 0 then
+				zPosition = 3.18
+				xPosition = 0.147
+			else
+				zPosition = 4
+				xPosition = 0.45
+			end
+		elseif params.signalPoleType == 4 then	
+				zPosition = 3.18
+				xPosition = 0.147
+		elseif params.signalPoleType == 5 then	
+				zPosition = 9.1
+				xPosition = 0.08
+		end
+		
+		if params.autoNumber == 0 then
+			result.models[#result.models+1] = {
+				id = "railroad/formsig_1915/asset zs3/formsig_signalnummer_static.mdl",
+				transf = { -1 * scalefactor, 0, 0, 0, -0, -1 * 0.75, 0, 0, 0, 0, 1 * scalefactor, 0, xPosition+signalDistance, yPosition, zPosition, 1 },				
+			}
+						
+			local Text = letters[math.random(#letters)] .. numbers[math.random(#numbers)]
+			
+			result.labelText = {
+				[0] = { Text }
+			}	
+		else
+			result.models[#result.models+1] = {
+					id = "railroad/formsig_1915/asset zs3/formsig_signalnummer.mdl",
+					transf = { -1, 0, 0, 0, -0, -1, 0, 0, 0, 0, 1, 0, xPosition+signalDistance, yPosition, zPosition, 1 },				
+				}
+		end	 
+		
+			result.models[#result.models+1] = {
+                id = "railroad/formsig_1915/asset zs3/formsig_signalnummer_halter.mdl",
+                transf = { -2, 0, 0, 0, -0, -2, 0, 0, 0, 0, 2, 0, xPosition+signalDistance, yPosition, zPosition, 1 },				
+            }
+		
+		result.groundFaces[1] = { face = { {0.01, -0.01}, { 0.01, 0.01}, {-0.01, 0.01}, {-0.01, -0.01} }, modes = { { type = "FILL", key = "industry_floor.lua" } } }
+		result.terrainAlignmentLists = {
+            {
+    			type = "EQUAL",
+    			faces =  { },
+    		},
+        }
+
+		return result
+	end
+}
+
+end

@@ -1,0 +1,185 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 5, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/schmalmast_8m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},							
+					{						
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/mastschild_schmal_8m_hp2_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.8, 1, },
+					},
+					--- Licht Hp0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_rot_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 0.21, 1, },
+					},	
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.705, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 0.3, 1, },
+					},	
+					--- Flügel oben Hp1 ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 8.396, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/stange_1_8m_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.12, -0.24, 8.295, 1, },
+					},						
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/gewicht_oben_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 4.345, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.8, 1, },
+					},	
+					--- Flügel mitte Hp2 ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_mitte_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 5.916, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_8m_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.22, -0.11, 5.7, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/gewicht_unten_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.04, 0, 4.345, 1, },
+					},						
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas_scheibe.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_gruen_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 5.3, 1, },
+					},	
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 2.205, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -2.2, 1, },
+					},
+					--- Licht Hp2 ---
+					{						
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gruen_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, -2.291, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+		--- Sperrsignal ---
+		{
+			node = {
+				animations = { },
+				children = {					
+					{						
+						materials = { "railroad/signals/sperrsignal/sperrsignal.mtl", },
+						mesh = "railroad/signals/sperrsignal/mast_2_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},						
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/signals/sperrsignal/dreh.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+                                forward = false,
+								params = {
+									id = "railroad/signals/sperrsignal/dreh.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/signals/sperrsignal/sperrsignal.mtl", },
+						mesh = "railroad/signals/sperrsignal/scheibe_1_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.47, 0, 4.01557, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.5, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig 8m asig schmal Hp0/sh1, 2 flügel, Mastblende"),
+            description = _("Formsignal der Einheitsbauform als Flachmast mit Mastblende und Rangiersignal. Masthöhe 8m. Aufgestellt als Asig zwischen 1930 und 1948."),
+		},
+		category = {
+			categories = {"Formsignal Einheitsbauform Flach 8m Asig"},
+		},
+		signal = {
+			type = "PATH_SIGNAL",
+		},
+		formSignale = {
+			side = "right",
+			signalPole = "false",
+			schmal	= true,
+			weg		= false,
+			exot	= false,
+			bstg	= false,
+			zs3Zs3v = false,
+			sh1 	= true,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= false,
+			waypoint = false,			
+		},
+	},
+	version = 1,
+}
+end

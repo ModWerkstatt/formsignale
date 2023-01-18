@@ -1,0 +1,170 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 13.5, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/mast_4m_brucke_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},							
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/Mastschild_4m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18, 0, 1.35, 1, },
+					},
+					--- Licht Hp0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_rot_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -4.09, 1, },
+					},	
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, 0.405, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -4, 1, },
+					},	
+					--- Flügel oben Hp1 ---
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/fluegel_oben_auf.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/fluegel_oben_zu.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_oben_kurz_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 4.096, 1, },
+					},					
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/stange_1_4m_auf.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/stange_1_4m_zu.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_1_4m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 3.985, 1, },
+					},			
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/scheibe_auf.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/scheibe_zu.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.085, 0.13, 3.5, 1, },
+					},	
+					--- Licht Hp1 ---						
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/licht_gruen.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/licht_gruen.ani",
+								},
+								type = "FILE_REF",
+							},
+						},		
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gruen_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -4.09, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 3.1, -2.15, trackHeightOffset+7.45, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig 4m sbr Hp0/Hp1, 1 flügel, Negativ Flügel, Mastblende"),
+            description = _("Formsignal der Einheitsbauform mit Mastblende und Negativ Flügel ohne Rangiersignal. Masthöhe 4m für Signalbrücke. Aufgestellt als Esig, Bksig und Asig zwischen 1930 und 1948."),
+		},
+		category = {
+			categories = {"Formsignal Einheitsbauform 4m sbr"},
+		},
+		signal = {
+			type = "WAYPOINT",
+		},
+		formSignale = {
+			side = "right",
+			signalPole = "sbr",
+			schmal	= false,
+			weg		= false,
+			exot	= false,
+			bstg	= false,
+			zs3Zs3v = false,
+			sh1 	= false,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= false,
+			waypoint = true,			
+		},
+	},
+	version = 1,
+}
+end

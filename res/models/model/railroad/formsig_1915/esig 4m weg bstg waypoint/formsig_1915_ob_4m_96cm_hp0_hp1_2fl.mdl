@@ -1,0 +1,118 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset+1.05, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_weg.mtl", },
+						mesh = "railroad/formsig_1915/mast_4m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},	
+					--- Flügel oben Hp1 ---
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/fluegel_oben_auf.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/fluegel_oben_zu.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_oben_kurz_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 4.096, 1, },
+					},					
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/stange_1_4m_auf.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/stange_1_4m_zu.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/stange_1_4m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 3.985, 1, },
+					},	
+					--- Flügel mitte Hp2 ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_mitte_kurz_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.21, 0, 2.516, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_4m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.11, 2.29, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -3, -3, trackHeightOffset+1.05, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1915,
+			yearTo = 1930,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig weg 4m Hp0/Hp1, 2 flügel, 96cm bstg"),
+            description = _("Formsignal der Einheitsbauform für Wegesinaliesierung ohne Mastblende und Rangiersignal. Masthöhe 4m. Für Bahnsteighöhe 96cm ohne Bahnsteigdach. Aufgestellt als Esig, Bksig und Asig zwischen 1915 und 1930."),
+		},
+		category = {
+			categories = {"Formsignal Einheitsbauform Weg 4m bstg"},
+		},
+		signal = {
+			type = "WAYPOINT",
+		},
+		formSignale = {
+			side = "right",
+			signalPole = "false",
+			schmal	= false,
+			weg		= true,
+			exot	= false,
+			bstg	= true,
+			zs3Zs3v = false,
+			sh1 	= false,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= false,
+			waypoint = true,			
+		},
+	},
+	version = 1,
+}
+end

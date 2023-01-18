@@ -1,0 +1,88 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/vorsignal_spiegelmast_5m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					--- Scheibe ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/signalscheibe_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0698, 0, 5.257, 1, },
+					},
+					--- Stange hinten ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_5m_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0151, 0.112, 5.256, 1, },
+					},	
+					--- Stange Scheibe ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0527, -0.189, 5.164, 1, },
+					},	
+					--- Hebel ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/hebel_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
+					},	
+					
+					--- Blende Oben ---
+					
+					--- Blende Rechts (scheibe_rechts_gelb) ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_rechts_RG_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 4.479, 1, },
+					},	
+					
+					--- Blende Unten ---
+					
+					--- Blende Links (scheibe_links_gelb) ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_links_RG_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 3.943, 1, },
+					},	
+					--- Kreuz ---
+					{
+						materials = { "ks_signale/misc/ks_signal_misc.mtl", },
+						mesh = "ks_signale/schilder/ks_kreuz.msh",	
+						name = "Kreuz",
+						transf = {-1, 0, 0, 0, 0, 0.707, -0.707, 0, 0, 0.707, 0.707, 0, 0.12, 0, 4.6, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+	},
+	version = 1,
+}
+end

@@ -1,0 +1,208 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, 4, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1.5, 2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/e_vorsignal_5m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					--- Scheibe ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/signalscheibe_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0698, 0, 5.257, 1, },
+					},
+					--- Stange hinten ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/stange_5m_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0151, 0.112, 5.256, 1, },
+					},	
+					--- Stange Scheibe ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0527, -0.189, 5.164, 1, },
+					},	
+					--- Hebel ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/hebel_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
+					},	
+					
+					--- Blende Oben ---
+					
+					--- Licht Vr0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 4.592, 1, },
+					},	
+					--- Licht vr1 ---						
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/licht_gruen.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/licht_gruen.ani",
+								},
+								type = "FILE_REF",
+							},
+						},		
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gruen_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 4.592, 1, },
+					},	
+					--- Blende Rechts (scheibe_rechts_gelb) ---
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/scheibe_rechts_RG_vsig.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/scheibe_rechts_RG_vsig.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_rechts_RG_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 4.479, 1, },
+					},	
+					
+					--- Blende Unten ---
+					
+					--- Licht Vr0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 3.825, 1, },
+					},
+					--- Blende Links (scheibe_links_gelb) ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_links_RG_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 3.943, 1, },
+					},		
+					--- Pfeil ---
+					{						
+						animations = {
+							green = {
+								params = {
+									id = "railroad/formsig_1915/scheibe_links_RG_vsig.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								forward = false,
+								params = {
+									id = "railroad/formsig_1915/scheibe_links_RG_vsig.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/formsig_1915/formsignal_vsig.mtl", },
+						mesh = "railroad/formsig_1915/pfeil_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.164, -0.004, 3.98, 1, },
+					},		
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1.5, 2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+		{
+			node = {
+				animations = { },
+				children = {
+					--- Ne 2 ---	
+					{
+						materials = { "railroad/signaltafel/signaltafel.mtl", },
+						mesh = "railroad/signaltafel/pfosten_kurz_lod0.msh",
+						name = "Mast",
+						transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.6, 0, 0.1, 1, },
+					},
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/vs_schild_lod0.msh",
+						transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.69, 0, 0.7, 1, },
+					},	
+					--- Vkb ---	
+					{
+						materials = { "railroad/signaltafel/signaltafel.mtl", },
+						mesh = "railroad/signaltafel/dreieck_lod0.msh",
+						name = "Mast",
+						transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.6, 0, -0.95, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1.5, 2.15, trackHeightOffset-0.15, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1955,
+			yearTo = 1959,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig Vsig 5m links Anbau Vr0/vr2 vkb, mit Pfeil"),
+            description = _("Form Vorsignal zum Anbau an ein Hauptsignal mit der Höhe 10m oder 12m. Masthöhe 5m. Aufgestellt zwischen 1955 und 1959."),
+		},
+		category = {
+			categories = {"Formsignal Vorsignal 5m Anbau"},
+		},
+		signal = {
+			type = "WAYPOINT",
+		},
+		formSignale = {
+			side = "left",
+			signalPole = "false",
+			schmal	= false,
+			weg		= false,
+			exot	= false,
+			bstg	= false,
+			zs3Zs3v = false,
+			sh1 	= false,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= true,
+			waypoint = true,			
+		},
+	},
+	version = 1,
+}
+end

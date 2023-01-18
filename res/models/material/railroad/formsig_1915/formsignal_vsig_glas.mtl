@@ -1,0 +1,32 @@
+function data()
+return {
+	params = {
+		alpha_test = {
+			sorted = false, 
+		},
+		fade_out_range = {
+			fadeOutEndDist = 20000,
+			fadeOutStartDist = 10000,
+		},
+		map_albedo_opacity = {
+			fileName = "models/railroad/formsig_1915/vsig_glas_albedo.dds",
+			type = "TWOD",
+		},
+		map_metal_gloss_ao = {
+			fileName = "models/railroad/formsig_1915/vsig_glas_metal_gloss_ao.dds",
+			type = "TWOD",
+		},
+		polygon_offset = {
+			factor = -1,
+			forceDepthWrite = false,
+			units = -1,
+		},
+		two_sided = {
+			flipNormal = true,
+			twoSided = false,
+		},
+	},
+	type = "PHYS_TRANSPARENT",
+    order = 0,
+}
+end

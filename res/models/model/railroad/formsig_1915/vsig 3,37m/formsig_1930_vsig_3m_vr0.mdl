@@ -1,0 +1,143 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/vorsignal_spiegelmast_3m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},	
+					--- Scheibe ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/signalscheibe_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0698, 0, 3.257, 1, },
+					},
+					--- Stange hinten ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_3m_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0151, 0.112, 3.256, 1, },
+					},	
+					--- Stange Scheibe ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0527, -0.189, 3.164, 1, },
+					},		
+					--- Hebel ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", },
+						mesh = "railroad/formsig_1915/hebel_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
+					},	
+					--- Blende Oben ---
+					
+					--- Licht Vr0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 2.592, 1, },
+					},
+					--- Blende Rechts (scheibe_rechts_gelb) ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_rechts_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 0, 1, },
+					},	
+					
+					--- Blende Unten ---
+					
+					--- Licht Vr0 ---						
+					{	
+						materials = { "railroad/formsig_1915/licht.mtl", },
+						mesh = "railroad/formsig_1915/licht_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 1.825, 1, },
+					},
+					--- Blende Links (scheibe_links_gelb) ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_vsig_grau.mtl", "railroad/formsig_1915/formsignal_vsig_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_links_gelb_vsig_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 0, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+		{
+			node = {
+				animations = { },
+				children = {
+					--- Ne 2 ---	
+					{
+						materials = { "railroad/signaltafel/signaltafel.mtl", },
+						mesh = "railroad/signaltafel/pfosten_kurz_lod0.msh",
+						name = "Mast",
+						transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.6, 0, 0.1, 1, },
+					},
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/vs_schild_lod0.msh",
+						transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.69, 0, 0.7, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset-0.15, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig Vsig 3m Vr0"),
+            description = _("Form Vorsignal mit der Masthöhe 3m. Nicht zum Anbauen an ein Hauptsignal. Aufgestellt zwischen 1930 und 1948."),
+		},
+		category = {
+			categories = {"Formsignal Vorsignal 3m"},
+		},
+		signal = {
+			type = "WAYPOINT",
+		},
+		formSignale = {
+			side = "right",
+			signalPole = "false",
+			schmal	= false,
+			weg		= false,
+			exot	= false,
+			bstg	= false,
+			zs3Zs3v = false,
+			sh1 	= false,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= false,
+			waypoint = true,			
+		},
+	},
+	version = 1,
+}
+end

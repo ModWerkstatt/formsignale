@@ -1,0 +1,64 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 0.0099999997764826, 0.15000000596046, 0.17000000178814, },
+		bbMin = { -0.0099999997764826, -0.15000000596046, -0.17000000178814, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.049999997019768, 0.37999999523163, 0.5, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "ks_signale/misc/ks_signal_misc_2.mtl", },
+						mesh = "ks_signale/schilder/ks_signalnummer_tafel.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1915,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+			priceScale = 1,
+		},
+		labelList = {
+			labels = {
+				{
+					alignment = "CENTER",
+					alpha = 1,
+					alphaMode = "CUTOUT",
+					childId = "RootNode",
+					color = { 0, 0, 0, },
+					filter = "NONE",
+					fitting = "SCALE",
+					nLines = 1,
+					params = { },
+					renderMode = "STD",
+					size = { 10, 13, },
+					transf = { -1.3113415908705e-09, -0.029999999329448, -0, 0, -1.3113415908705e-09, 5.7320565807826e-17, 0.029999999329448, 0, -0.029999999329448, 1.3113415908705e-09, -1.3113415908705e-09, 0, -0.019999999552965, 0.15000000596046, -0.15000000596046, 1, },
+					type = "NAME",
+					verticalAlignment = "CENTER",
+				},
+			},
+		},
+	},
+	version = 1,
+}
+end

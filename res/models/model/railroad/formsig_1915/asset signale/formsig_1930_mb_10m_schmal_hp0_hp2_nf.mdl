@@ -1,0 +1,115 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/schmalmast_10m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},							
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/mastschild_schmal_10m_hp2_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.7, 1, },
+					},
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 6.705, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 2, 1, },
+					},	
+					--- Flügel oben Hp1 ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 10.396, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_1_10m_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, -0.24, 10.295, 1, },
+					},						
+					{
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/gewicht_oben_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 6.345, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 9.8, 1, },
+					},	
+					--- Flügel mitte Hp2 ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_mitte_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 7.916, 1, },
+					},					
+					{
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/stange_2_10m_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.22, -0.11, 7.7, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/gewicht_unten_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.04, 0, 6.345, 1, },
+					},						
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas_scheibe.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_gruen_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.3, 1, },
+					},	
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.205, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -0.2, 1, },
+					},
+					--- Kreuz ---
+					{
+						materials = { "ks_signale/misc/ks_signal_misc.mtl", },
+						mesh = "ks_signale/schilder/ks_kreuz.msh",	
+						name = "Kreuz",
+						transf = {-1, 0, 0, 0, 0, 0.707, -0.707, 0, 0, 0.707, 0.707, 0, 0.25, 0.2, 10.4, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+	},
+	version = 1,
+}
+end

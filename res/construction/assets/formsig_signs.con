@@ -1,0 +1,438 @@
+﻿function data()
+return {
+	type = "ASSET_TRACK",
+	description = {
+		name = _("formsignal_extras"),
+		description = _("formsignal_extras_desc")		
+	},
+	availability = {
+		yearFrom = 1915,
+		yearTo = 1959,
+	},
+	buildMode = "MULTI",
+	categories = { "MW Signal Assets" },
+	order = 1,
+	skipCollision = true,
+	autoRemovable = false,
+
+	params = {
+		{
+			key = "signType",
+			name = _("Zusatzsignal"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/construction/parameters/ks_signale/zs3_ui.tga", "ui/construction/parameters/ks_signale/zs6_ui.tga", "ui/construction/parameters/formsig_1915/zsa_ui.tga", "ui/construction/parameters/formsig_1915/zsa_quadrat_ui.tga", "ui/construction/parameters/formsig_1915/zs1_ui.tga", "ui/construction/parameters/formsig_1915/klapp_zs3_ui.tga", "ui/construction/parameters/formsig_1915/klapp_fw101_ui.tga", "ui/construction/parameters/ks_signale/pzb_ui.tga", },
+			defaultIndex = 0,
+			tooltip = _("tooltip_addition_signal"),
+		},
+		{
+			key = "signalPoleType",
+			name = _("Masthöhe"),
+			values = { _("4 m"), _("6 m"), _("8 m"), _("10 m"), _("12 m"), _("Signalbrücke 4 m"), _("Signalbrücke 6 m"), _("Einzeln (Zs3)") },
+			defaultIndex = 3,
+			tooltip = _("tooltip_signal_pole_height"),
+		},	
+		{
+			key = "signalWidh",
+			name = _("Signalbreite"),
+			values = { _("breit"), _("schmal") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_signalwidh"),
+		},
+	--[[	{
+			key = "signalFluegel",
+			name = _("Anzahl der Flügel"),
+			values = { _("1"), _("2"), _("3") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_signalwidh"),
+		},]]
+		{
+			key = "signalRotation",
+			name = _("gedrehtes Zs3"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_position"),
+		},
+		{
+			key = "speed",
+			name = _("Blech Zs3 Geschwindigkeit in km/h\n(Steuert auch Klapp-Zs3 und -Fw101 an)"),
+			uiType = "COMBOBOX",
+			values = { "30", "40", "50", "60", "70", "80", "90", "100", },
+			defaultIndex = 0,
+			tooltip = _("tooltip_speed"),
+		},	
+		{
+			key = "signalPosition",
+			name = _("Standort"),
+			values = { _("Rechts"), _("Links") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_position"),
+		},
+		{
+			key = "tapedOff",
+			name = _("Blechschilder abgeklebt"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_tapedOff"),
+		},
+		{
+			key = "signaldistance",
+			name = _("Verschub für Signal Distance Mod"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_signalddistancemod"),
+		},
+	},
+
+	updateFn = function(params)
+		local result = { }		
+		result.models = { }	
+		result.groundFaces = { }
+		
+		local xPosition = 0
+		local zPosition = 0
+		local yPosition = 0
+		local speedNumber = 0
+		local signalDistance = 0
+		local underscore = "_"
+		local rotationValue = ""
+		local tapeoffValue = ""
+		local widhValue = ""
+		
+		if params.speed == 0 then
+			speedNumber = "3"
+		else
+			speedNumber = tostring(params.speed + 3)
+		end
+		
+		
+		if params.signalWidh == 0 then
+			widhValue = ""
+		else
+			widhValue = "_schmal"
+		end
+		
+		
+		if params.signalRotation == 0 then
+			rotationValue = ""
+		else
+			rotationValue = "_g"
+		end
+		
+		
+		if params.tapedOff == 0 then
+			tapeoffValue = ""
+		else
+			tapeoffValue = "_abge"
+			speedNumber = ""
+			underscore = ""
+		end
+		
+		
+		if params.signaldistance == 0 then
+			signalDistance = -0.01			
+		elseif params.signaldistance == 1 then
+			signalDistance = 7.988
+		end
+		
+		
+		if params.signalPosition == 0 then
+			yPosition = 0
+		elseif params.signalPosition == 1 then
+			yPosition = 4.3
+		end		
+	
+--if params.tapedOff == 0 then
+	if params.signType == 0 then
+			
+			if params.signalPoleType == 0 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1.2, 1 },				
+					}
+			elseif params.signalPoleType == 1 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1, 1 },				
+					}
+			elseif params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  1, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  3, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5, 1 },				
+					}
+			elseif params.signalPoleType == 5 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  6.05, 1 },				
+					}
+			elseif params.signalPoleType == 6 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  6.3, 1 },					
+					}
+			elseif params.signalPoleType == 7 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_stange.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.2+signalDistance, -2.15+yPosition,  0.2, 1 },				
+					}
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs3"..underscore..""..speedNumber..""..rotationValue..""..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1, 1 },				
+					}
+		end
+		
+		
+	elseif params.signType == 1 then
+			
+			if params.signalPoleType == 0 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1.1, 1 },				
+					}
+			elseif params.signalPoleType == 1 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1, 1 },				
+					}
+			elseif params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  1.05, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  3.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+			elseif params.signalPoleType == 7 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_stange.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.2+signalDistance, -2.15+yPosition,  0.2, 1 },				
+					}
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_zstafeln_zs6"..tapeoffValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1, 1 },				
+					}
+		end
+		
+		
+	elseif params.signType == 2 then
+	
+			if params.signalPoleType == 0 or params.signalPoleType == 1 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1, 1 },				
+					}
+			elseif params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  1.05, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  3.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+			elseif params.signalPoleType == 5 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  6.1, 1 },				
+					}
+			elseif params.signalPoleType == 6 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  6.4, 1 },				
+					}
+			elseif params.signalPoleType == 7 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_stange.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -2.15+yPosition,  1, 1 },				
+					}
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, -0.05+yPosition,  1.36, 1 },				
+					}
+		end
+		
+		
+	elseif params.signType == 3 then
+	
+			if params.signalPoleType == 0 or params.signalPoleType == 1 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, yPosition,  -1, 1 },				
+					}
+			elseif params.signalPoleType == 5 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.11-signalDistance, yPosition,  6.1, 1 },				
+					}
+			elseif params.signalPoleType == 6 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.11-signalDistance, yPosition,  6.4, 1 },				
+					}
+			elseif params.signalPoleType == 7 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_stange.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -2.15+yPosition,  1, 1 },				
+					}
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.04+yPosition,  1.35, 1 },				
+					}
+			end
+				if params.signalWidh == 0 then
+			if params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, yPosition,  1.05, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, yPosition,  3.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs6.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, yPosition,  5.05, 1 },				
+					}
+			end
+				else
+			if params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3_schmal.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  1.05, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3_schmal.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  3.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_licht_8m_zs3_schmal.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+			end
+		end
+		
+		
+	elseif params.signType == 4 then
+	
+			if params.signalPoleType == 0 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -1.84, 1 },				
+					}
+			elseif params.signalPoleType == 1 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  -0.84, 1 },				
+					}
+			elseif params.signalPoleType == 2 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  1.05, 1 },				
+					}
+			elseif params.signalPoleType == 3 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  3.05, 1 },				
+					}
+			elseif params.signalPoleType == 4 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+			elseif params.signalPoleType == 5 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  5.6, 1 },				
+					}
+			elseif params.signalPoleType == 6 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1.mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.88+signalDistance, yPosition,  6.6, 1 },				
+					}
+			elseif params.signalPoleType == 7 then
+					result.models[#result.models+1] = {
+						id = "railroad/formsig_1915/asset zs3/formsig_8m_zs1"..widhValue..".mdl",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.99+signalDistance, yPosition,  5.05, 1 },				
+					}
+		end
+		
+		
+	elseif params.signType == 5 then
+		if params.speed == 0 or params.speed == 1 or params.speed == 2 then
+				result.models[#result.models+1] = {
+					id = "railroad/formsig_1915/asset zs3/formsig_1948_zs3_30.mdl",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.5, 1, 1 },				
+				}
+		else
+				result.models[#result.models+1] = {
+					id = "railroad/formsig_1915/asset zs3/formsig_1948_zs3_60.mdl",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.5, 1, 1 },				
+				}
+		end
+					
+	elseif params.signType == 6 then
+		if params.speed == 0 or params.speed == 1 or params.speed == 2 then
+				result.models[#result.models+1] = {
+					id = "railroad/formsig_1915/asset zs3/formsig_1935_fw101.mdl",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.5, 1, 1 },				
+				}
+		else
+				result.models[#result.models+1] = {
+					id = "railroad/formsig_1915/asset zs3/formsig_1935_fw101_2.mdl",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.5, 1, 1 },				
+				}
+		end
+		
+	elseif params.signType == 7 then
+				result.models[#result.models+1] = {
+					id = "railroad/ks_signale/misc/ks_pzb_1000.mdl",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, signalDistance, -0.95, 1.1, 1 },				
+				}
+	end
+		
+	
+		result.groundFaces[1] = { face = { {0.01, -0.01}, { 0.01, 0.01}, {-0.01, 0.01}, {-0.01, -0.01} }, modes = { { type = "FILL", key = "industry_floor.lua" } } }
+        
+		result.terrainAlignmentLists = {
+            {
+    			type = "EQUAL",
+    			faces =  { },
+    		},
+        }
+
+		return result
+	end
+}
+
+end

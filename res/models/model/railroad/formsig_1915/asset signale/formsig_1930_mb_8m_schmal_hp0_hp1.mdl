@@ -1,0 +1,83 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 6, 4, 11, },
+		bbMin = { -1.1, -5, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", },
+						mesh = "railroad/formsig_1915/schmalmast_8m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},							
+					{						
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/mastschild_schmal_8m_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.8, 1, },
+					},
+					--- Laterne ---						
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laterne_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.705, 1, },
+					},							
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/laternenhalter_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 0.3, 1, },
+					},	
+					--- Flügel oben Hp1 ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/fluegel_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 8.396, 1, },
+					},					
+					{
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/stange_1_8m_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.12, -0.24, 8.295, 1, },
+					},						
+					{	
+						materials = { "railroad/formsig_1915/formsignal.mtl", },
+						mesh = "railroad/formsig_1915/gewicht_oben_schmal_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 4.345, 1, },
+					},					
+					{	
+						materials = { "railroad/formsig_1915/formsignal_grau.mtl", "railroad/formsig_1915/formsignal_glas.mtl", },
+						mesh = "railroad/formsig_1915/scheibe_oben_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.8, 1, },
+					},	
+					--- Kreuz ---
+					{
+						materials = { "ks_signale/misc/ks_signal_misc.mtl", },
+						mesh = "ks_signale/schilder/ks_kreuz.msh",	
+						name = "Kreuz",
+						transf = {-1, 0, 0, 0, 0, 0.707, -0.707, 0, 0, 0.707, 0.707, 0, 0.25, 0.2, 8.4, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1930,
+			yearTo = 1948,
+		},
+	},
+	version = 1,
+}
+end

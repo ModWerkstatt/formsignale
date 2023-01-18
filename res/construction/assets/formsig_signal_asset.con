@@ -1,0 +1,400 @@
+﻿function data()
+return {
+	type = "ASSET_TRACK",
+	description = {
+		name = _("formsignal_signale_als_ssets"),
+		description = _("formsignal_signale_assets_desc")
+	},
+	availability = {
+		yearFrom = 1915,
+		yearTo = 1959,
+	},
+	buildMode = "MULTI",
+	categories = { "MW Signal Assets" },
+	order = 1,
+	skipCollision = true,
+	autoRemovable = false,
+
+	params = {	
+		{
+			key = "signalYear",
+			name = _("Signaltyp"),			
+			values = { _("1915-1930"), _("1930-1948"), _("1948-1959") },
+			defaultIndex = 3,
+			tooltip = _("tooltip_signaltype"),
+		},
+		{
+			key = "signalPoleType",
+			name = _("Masttyp"),
+			values = { _("3 m"), _("4 m"), _("5 m"), _("6 m"), _("8 m"), _("10 m"), _("12 m"), _("Signalbrücke 4 m"), _("Signalbrücke 6 m"), _("Sperrsignal") },
+			defaultIndex = 5,
+			tooltip = _("tooltip_masttype"),
+		},
+		{
+			key = "signalFluegel",
+			name = _("Anzahl der Flügel (wenn möglich)"),
+			values = { _("1"), _("2"), _("3") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_sperrheight"),
+		},
+		{
+			key = "signalPfeil",
+			name = _("Vsig Extras (wenn verfügbar)"),
+			values = { _("nichts"), _("Pfeil"), _("vkb/wdh Zusatzlicht") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_vsigpfeil"),
+		},
+		{
+			key = "signalSchmal",
+			name = _("Schmaler Mast (wenn möglich)"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_mastschmal"),
+		},
+		{
+			key = "signalLichtVsig",
+			name = _("Licht-Vsig (ab 1948)"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_mastschmal"),
+		},
+		{
+			key = "signalSperrHeight",
+			name = _("Höhe des Sperrsignals (wenn möglich)"),
+			values = { _("hoch"), _("niedrig") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_sperrheight"),
+		},
+		{
+			key = "signalNegativFluegel",
+			name = _("Negativ Flügel (wenn möglich)"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_negativfluegel"),
+		},
+		{
+			key = "signalVr0",
+			name = _("Nur Vr 0 Vsig"),
+			values = { _("nein"), _("ja") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_vrnull"),
+		},
+		{
+			key = "signalPosition",
+			name = _("Standort (wenn möglich)"),
+			values = { _("Rechts"), _("Links") },
+			defaultIndex = 0,
+			tooltip = _("tooltip_position"),
+		},
+	},
+
+	updateFn = function(params)
+		local result = {}
+		result.models =  {}		
+				
+		local signalName = ""
+		local signalTypeString = ""
+		local signalPoleTypeString = ""
+		local signalYearString = ""
+		local signalNegativString = ""
+		local signalSchmalValue = ""
+		local yPosition = 0
+		
+		
+		
+	-- 1915 - 1930		
+	
+		if params.signalYear == 0 then	
+		
+		signalYearString = "1915"
+		
+			if params.signalPoleType == 0 then
+				signalPoleTypeString = "vsig_3m"
+			elseif params.signalPoleType == 1 then
+				signalPoleTypeString = "ob_4m"
+			elseif params.signalPoleType == 2 then
+				signalPoleTypeString = "vsig_5m"
+			elseif params.signalPoleType == 3 then
+				signalPoleTypeString = "ob_6m"
+			elseif params.signalPoleType == 4 then
+				signalPoleTypeString = "ob_8m"
+			elseif params.signalPoleType == 5 then
+				signalPoleTypeString = "ob_10m"
+			elseif params.signalPoleType == 6 then
+				signalPoleTypeString = "ob_12m"
+			elseif params.signalPoleType == 7 then
+				signalPoleTypeString = "sbr_ob_4m"
+			elseif params.signalPoleType == 8 then
+				signalPoleTypeString = "sbr_ob_6m"
+			end
+			
+			
+			if params.signalNegativFluegel == 0 then
+				signalNegativString = ""
+			else
+				signalNegativString = "_nf"
+			end
+			
+			
+			if params.signalFluegel == 0 then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0"
+					else
+						signalTypeString = "_vr0"
+					end
+				else
+				signalTypeString = "_hp0_hp1"
+				end
+			elseif params.signalFluegel == 1 then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0"
+					else
+						signalTypeString = "_vr0"
+					end
+				else
+				signalTypeString = "_hp0_hp2"
+				end
+			elseif params.signalFluegel == 2 then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0"
+					else
+						signalTypeString = "_vr0"
+					end
+				else
+					if (params.signalPoleType == 0 or params.signalPoleType == 1 or params.signalPoleType == 2 or params.signalPoleType == 3 or params.signalPoleType == 7 or params.signalPoleType == 8) then
+					signalTypeString = "_hp0_hp2"
+					else
+					signalTypeString = "_hp0_hp3"
+					end
+				end
+			end
+			
+			
+			
+	-- 1930 - 1948		
+			
+		elseif params.signalYear == 1 then	
+		
+		signalYearString = "1930"
+		
+			if params.signalPoleType == 0 then
+				signalPoleTypeString = "vsig_3m"
+			elseif params.signalPoleType == 1 then
+				signalPoleTypeString = "mb_4m"
+			elseif params.signalPoleType == 2 then
+				signalPoleTypeString = "vsig_5m"
+			elseif params.signalPoleType == 3 then
+				signalPoleTypeString = "mb_6m"
+			elseif params.signalPoleType == 4 then
+				signalPoleTypeString = "mb_8m"
+			elseif params.signalPoleType == 5 then
+				signalPoleTypeString = "mb_10m"
+			elseif params.signalPoleType == 6 then
+				signalPoleTypeString = "mb_12m"
+			elseif params.signalPoleType == 7 then
+				signalPoleTypeString = "sbr_mb_4m"
+			elseif params.signalPoleType == 8 then
+				signalPoleTypeString = "sbr_mb_6m"
+			end
+			
+			
+			if params.signalSchmal == 1 then
+				if (params.signalPoleType == 4 or params.signalPoleType == 5)  then
+					signalSchmalValue = "_schmal"
+				else
+					signalSchmalValue = ""
+				end
+			else
+				signalSchmalValue = ""
+			end
+			
+			
+			if params.signalNegativFluegel == 0 then
+				signalNegativString = ""
+			else
+				signalNegativString = "_nf"
+			end
+			
+			
+			if params.signalFluegel == 0 then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0_pf"
+						signalNegativString = ""
+					else
+						signalTypeString = "_vr0"
+						signalNegativString = ""
+					end
+				else
+				signalTypeString = "_hp0_hp1"
+				end
+			elseif (params.signalFluegel == 1 or params.signalFluegel == 2) then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0_pf"
+						signalNegativString = ""
+					else
+						signalTypeString = "_vr0"
+						signalNegativString = ""
+					end
+				else
+				signalTypeString = "_hp0_hp2"
+				end
+			end
+			
+			
+			
+	-- 1948 - 1959
+			
+		elseif params.signalYear == 2 then	
+		
+		signalYearString = "1948"
+		
+			if params.signalPoleType == 0 then
+				if params.signalLichtVsig == 0 then
+				signalPoleTypeString = "vsig_3m"
+				elseif params.signalLichtVsig == 1 then
+				signalPoleTypeString = "vsig_4,2m"
+				end
+			elseif params.signalPoleType == 1 then
+				signalPoleTypeString = "mb_4m"
+			elseif params.signalPoleType == 2 then
+				if params.signalLichtVsig == 0 then
+				signalPoleTypeString = "vsig_5m"
+				else
+				signalPoleTypeString = "vsig_5,2m"
+				end
+			elseif params.signalPoleType == 3 then
+				signalPoleTypeString = "mb_6m"
+			elseif params.signalPoleType == 4 then
+				signalPoleTypeString = "mb_8m"
+			elseif params.signalPoleType == 5 then
+				signalPoleTypeString = "mb_10m"
+			elseif params.signalPoleType == 6 then
+				signalPoleTypeString = "mb_12m"
+			elseif params.signalPoleType == 7 then
+				signalPoleTypeString = "sbr_mb_4m"
+				signalNegativString	 = ""
+			elseif params.signalPoleType == 8 then
+				signalPoleTypeString = "sbr_mb_6m"
+				signalNegativString	 = ""
+			end
+			
+			
+			if params.signalSchmal == 1 then
+				if (params.signalPoleType == 4 or params.signalPoleType == 5)  then
+					signalSchmalValue = "_schmal"
+				else
+					signalSchmalValue = ""
+				end
+			else
+				signalSchmalValue = ""
+			end
+			
+			
+			if params.signalFluegel == 0 then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						if params.signalPfeil == 0 then
+						signalTypeString = "_vr0_vr0"
+						signalSchmalValue = ""
+						elseif params.signalPfeil == 1 then
+							if params.signalLichtVsig == 0 then
+						signalTypeString = "_vr0_vr0_pf"
+						signalSchmalValue = ""
+							else
+						signalTypeString = "_vr0_vr0_vkb"
+						signalSchmalValue = ""
+							end
+						elseif params.signalPfeil == 2 then
+							if params.signalLichtVsig == 0 then
+						signalTypeString = "_vr0_vr0_pf"
+						signalSchmalValue = ""
+							else
+						signalTypeString = "_vr0_vr0_vkb"
+						signalSchmalValue = ""
+							end
+						end
+					else
+						signalTypeString = "_vr0"
+						signalSchmalValue = ""
+					end
+				else
+				signalTypeString = "_hp0_hp1"
+				end
+			elseif (params.signalFluegel == 1 or params.signalFluegel == 2) then
+				if (params.signalPoleType == 0 or params.signalPoleType == 2) then
+					if params.signalVr0 == 0 then
+						signalTypeString = "_vr0_vr0"
+						signalNegativString = ""
+					else
+						signalTypeString = "_vr0"
+						signalNegativString = ""
+					end
+				else
+				signalTypeString = "_hp0_hp2"
+				end
+			end
+		end
+		
+			--signalName = "railroad/formsig_1915/asset signale/formsig_1915_"..signalPoleTypeString.."_"..signalTypeString.."_"..signalTypeString..".mdl"
+		
+		if params.signalPosition == 0 then
+		
+			yPosition = 0
+		
+			if params.signalPoleType == 9 then
+				if params.signalYear == 0 then
+				signalName = "railroad/formsig_1915/asset signale/formsig_sperr_drg.mdl"
+				else
+					if params.signalSperrHeight == 0 then
+					signalName = "railroad/formsig_1915/asset signale/formsig_sperr_db.mdl"
+					else
+					signalName = "railroad/formsig_1915/asset signale/formsig_sperr_db_sn.mdl"
+					end
+				end
+			else
+				signalName = "railroad/formsig_1915/asset signale/formsig_"..signalYearString.."_"..signalPoleTypeString..""..signalSchmalValue..""..signalTypeString..""..signalNegativString..".mdl"	
+			end
+		elseif params.signalPosition == 1 then
+		
+			yPosition = 4.8
+		
+			if params.signalPoleType == 9 then
+				if params.signalYear == 0 then
+				signalName = "railroad/formsig_1915/asset signale/formsig_sperr_drg.mdl"
+				else
+					if params.signalSperrHeight == 0 then
+					signalName = "railroad/formsig_1915/asset signale/formsig_sperr_db.mdl"
+					else
+					signalName = "railroad/formsig_1915/asset signale/formsig_sperr_db_sn.mdl"
+					end
+				end
+			else
+				if (params.signalPoleType == 7 or params.signalPoleType == 8) then
+				signalName = "railroad/formsig_1915/asset signale/formsig_"..signalYearString.."_"..signalPoleTypeString..""..signalSchmalValue..""..signalTypeString..""..signalNegativString..".mdl"	
+				else
+				signalName = "railroad/formsig_1915/asset signale/formsig_"..signalYearString.."_"..signalPoleTypeString..""..signalSchmalValue..""..signalTypeString..""..signalNegativString..".mdl"	
+				end
+			end
+		end
+		result.models[#result.models+1] = {
+                id = signalName,
+                transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, yPosition, 1, 1 },				
+             }
+		       
+		result.terrainAlignmentLists = {
+            {
+    			type = "EQUAL",
+    			faces =  { },
+    		},
+        }
+
+		return result
+	end
+}
+
+end

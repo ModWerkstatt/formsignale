@@ -1,0 +1,143 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 1, 3, 7, },
+		bbMin = { -1, -3, -1, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.49642997980118, 1.1774350404739, 4.8709001541138, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.023980006575584, -1.1774350404739, 3.1483700275421, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/Mast_lang_vs_lod0.msh",
+						name = "Mast",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/Schirm_Vs_lod0.msh",
+						name = "Zs 1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.3199999237061, -0.02, 4.936699981689, 1, },
+					},
+					--- Vorsignal ---
+					{
+						animations = {
+							green = {
+								params = {
+									id = "railroad/HV_51/on.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								params = {
+									id = "railroad/HV_51/off.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/HV_51/licht.mtl", },
+						mesh = "railroad/HV_51/Licht_Vs_gruen_lod0.msh",
+						name = "Licht grün",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.26899998545647, -0.34099999284744, 5.1760098266602, 1, },
+					},
+					{
+						animations = {
+							green = {
+								params = {
+									id = "railroad/HV_51/off.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								params = {
+									id = "railroad/HV_51/on.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/HV_51/licht.mtl", },
+						mesh = "railroad/HV_51/Licht_Vs_gelb_lod0.msh",
+						name = "Licht grün",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.26899998545647, -0.19099999284744, 5.1760098266602, 1, },
+					},
+					{
+						animations = {
+							green = {
+								params = {
+									id = "railroad/HV_51/on.ani",
+								},
+								type = "FILE_REF",
+							},
+							red = {
+								params = {
+									id = "railroad/HV_51/on.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "railroad/HV_51/licht.mtl", },
+						mesh = "railroad/HV_51/Licht_Vs_gelb_lod0.msh",
+						name = "Licht grün",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.26899998545647, 0.31999999284744, 4.6800002288818, 1, },
+					},
+					--- Vorsignaltafel ---
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/Vs_schild_lod0.msh",
+						name = "Zs 1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.1571200042963, -0.04, 1.0309400558472, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.15, trackHeightOffset, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 1500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1955,
+			yearTo = 1959,
+		},
+		cost = {
+			price = 3000,
+		},
+		description = {
+			name = _("Formsig Vsig 5,2m links Vr0/vr2"),
+            description = _("Licht Vorsignal zum Anbau an ein Hauptsignal mit der Höhe 10m oder 12m. Masthöhe 5,2m. Aufgestellt zwischen 1955 und 1959."),
+		},
+		category = {
+			categories = {"Formsignal Vorsignal 5m Anbau"},
+		},
+		signal = {
+			type = "WAYPOINT",
+		},
+		formSignale = {
+			side = "left",
+			signalPole = "false",
+			schmal	= false,
+			weg		= false,
+			exot	= false,
+			bstg	= false,
+			zs3Zs3v = false,
+			sh1 	= false,
+			ra11	= false,
+			zs1 	= false,
+			vkb		= false,
+			waypoint = true,			
+		},
+	},
+	version = 1,
+}
+end

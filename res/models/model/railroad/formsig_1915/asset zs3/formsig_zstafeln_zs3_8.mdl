@@ -1,0 +1,49 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 4.539999961853, 0.37999999523163, 3.7799999713898, },
+		bbMin = { -0.875, -2.1500000953674, -0.5, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 0.4375, 0.37999999523163, 0.5, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.4375, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "ks_signale/misc/ks_signal_misc.mtl", "ks_signale/zs_tafeln/ks_signal_zs3_v_8.mtl", },
+						mesh = "ks_signale/schilder/ks_zs3_tafel.msh",
+						transf = { 1, 0, -0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.46000000834465, 0, -6.5, 1, },
+					},
+					{
+						materials = { "railroad/HV_51/mast_strecke.mtl", },
+						mesh = "railroad/HV_51/ZSA_halter_stummel_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.94999998807907, 0, -0.10000000149012, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, -0, 1, 0, 0, 0, -0, 1, 0, 4.539999961853, -2.1500000953674, 3.7799999713898, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1993,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+			priceScale = 1,
+		},
+	},
+	version = 1,
+}
+end

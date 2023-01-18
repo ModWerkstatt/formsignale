@@ -1,0 +1,63 @@
+function data()
+trackHeightOffset = -0.2
+return {
+	boundingInfo = {
+		bbMax = { 4, 0, 10.5, },
+		bbMin = { -1.1, -4, -1, },
+	},
+	collider = {
+		params = { },
+		transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, trackHeightOffset, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {					
+					{						
+						materials = { "railroad/formsig_1915/formsignal_zs3.mtl", },
+						mesh = "railroad/formsig_1915/mast_zs3_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					--- Stange Lang ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_zs3.mtl", },
+						mesh = "railroad/formsig_1915/stange_lang_zs3_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18448, -0.097037, 3.9078, 1, },
+					},	
+					--- Kniegelenk ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_zs3.mtl", },
+						mesh = "railroad/formsig_1915/kniegelenk_zs3_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.11905, -0.057457, 3.961, 1, },
+					},	
+					--- Stange kurz ---
+					{
+						materials = { "railroad/formsig_1915/formsignal_zs3.mtl", },
+						mesh = "railroad/formsig_1915/stange_kurz_zs3_lod0.msh",						
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18162, -0.023998, 4.0356, 1, },
+					},	
+					--- Dreieck ---
+					{	
+						materials = { "railroad/formsig_1915/formsignal_zs3.mtl", },
+						mesh = "railroad/formsig_1915/form_fw101_30_lod0.msh",						
+						transf = { 0.087, 0, -0.996, 0, 0, 1, 0, 0, 0.996, 0, 0.087, 0, 0.52273, 0, 3.9587, 1, },
+					},	
+				},
+				name = "RootNode",
+				transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2, -3, trackHeightOffset+0.5, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 300,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1935,
+			yearTo = 1948,
+		},
+	},
+	version = 1,
+}
+end
