@@ -1,0 +1,116 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 5, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -2.15, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/mast_10m_lod0.msh",
+							name = "mast_10m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 10.096, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_10m_lod0.msh",
+							name = "stange_1_10m_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 10, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/mast_3_lod0.msh",
+							name = "mast_3_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/scheibe_3_lod0.msh",
+							name = "scheibe_3_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.42, 0.05, 0.65, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.5, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1915,
+				yearTo = 1930,
+			},
+			category = { 
+				categories = { "Formsignal Einheitsbauform Weg 10m asig", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Formsignal der Einheitsbauform fr Wegesinaliesierung mit Negativ Flgel ohne mastblende und Rangiersignal Niedrig. masthhe 10m. Aufgestellt als Esig, Bksig und Asig zwischen 1915 und 1930."),
+				name = _("Formsig weg asig 10m Hp0/sh1, 1 flgel"),
+			},
+			formSignale = { 
+				bstg = false,
+				exot = false,
+				ra11 = false,
+				schmal = false,
+				sh1 = true,
+				side = "right",
+				signalPole = "false",
+				vkb = false,
+				waypoint = false,
+				weg = true,
+				zs1 = false,
+				zs3Zs3v = false,
+			},
+			signal = { 
+				type = "PATH_SIGNAL",
+			},
+		},
+		version = 2,
+	}
+end

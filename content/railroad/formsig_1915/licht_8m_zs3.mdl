@@ -1,0 +1,46 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 4, 0, 10.5, },
+			bbMin = { -1.1, -4, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 2.55, 2, 5.75, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -1.45, -0.15, 4.55, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_lod0.msh",
+							name = "Zs 1",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.4, 0, 3.852, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_schirm_oben_lod0.msh",
+							name = "Zs 1",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0.35, 0, 3.872, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1948,
+				yearTo = 1959,
+			},
+		},
+		version = 2,
+	}
+end

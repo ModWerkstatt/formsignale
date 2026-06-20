@@ -1,0 +1,158 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 5, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -2.15, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/schmalmast_8m_lod0.msh",
+							name = "schmalmast_8m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mastschild_schmal_8m_lod0.msh",
+							name = "mastschild_schmal_8m_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.8, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_rot_lod0.msh",
+							name = "licht_rot_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 0.21, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "e_laterne_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.705, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 0.3, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben_lod0_6",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 8.396, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_8m_schmal_lod0.msh",
+							name = "stange_1_8m_schmal_lod0_7",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.12, -0.24, 8.295, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/gewicht_oben_schmal_lod0.msh",
+							name = "gewicht_oben_schmal_lod0_8",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 4.345, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben_lod0_9",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.8, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_pzb_1000.msh",
+							name = "ks_pzb_1000_10",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -1.2, 0.21, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/mast_3_lod0.msh",
+							name = "mast_3_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/scheibe_3_lod0.msh",
+							name = "scheibe_3_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.42, 0.05, 0.65, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.5, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1948,
+				yearTo = 1959,
+			},
+			category = { 
+				categories = { "Formsignal Einheitsbauform Flach 8m Asig", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Formsignal der Einheitsbauform als Flachmast mit mastblende, PZB und Rangiersignal Niedrig. masthhe 8m. Aufgestellt als Asig zwischen 1948 und 1959."),
+				name = _("Formsig 8m Asig schmal Hp0/Hp2, pzb, 1 flgel, mastblende"),
+			},
+			formSignale = { 
+				bstg = false,
+				exot = false,
+				ra11 = false,
+				schmal = true,
+				sh1 = true,
+				side = "right",
+				signalPole = "false",
+				vkb = false,
+				waypoint = false,
+				weg = false,
+				zs1 = false,
+				zs3Zs3v = false,
+			},
+			signal = { 
+				type = "PATH_SIGNAL",
+			},
+		},
+		version = 2,
+	}
+end

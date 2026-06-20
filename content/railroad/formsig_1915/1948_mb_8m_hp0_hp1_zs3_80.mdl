@@ -1,0 +1,213 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 4, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 4.5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -1.65, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mast_8m_lod0.msh",
+							name = "mast_8m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mastschild_8m_lod0.msh",
+							name = "mastschild_8m_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.17, 0, 2.5, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_rot_lod0.msh",
+							name = "licht_rot_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -0.09, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "e_laterne_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, 4.405, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/fluegel_oben_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/fluegel_oben_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben_lod0_6",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 8.096, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/stange_1_8m_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_1_8m_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_8m_lod0.msh",
+							name = "stange_1_8m_lod0_7",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 7.985, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/scheibe_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/scheibe_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben_lod0_8",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.085, 0.13, 7.5, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_gruen_lod0.msh",
+							name = "licht_gruen_lod0_9",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -0.09, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_lod0.msh",
+							name = "Zs 1",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.4, 0, 3.852, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_schirm_oben_lod0.msh",
+							name = "Zs 1",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 0.35, 0, 3.872, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/on.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/off.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "/railroad/zusatzanzeiger/mat/hv_zs3_8.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_display_lod0.msh",
+							name = "Licht grün",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0.295, 0, 3.852, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_pzb_1000.msh",
+							name = "ks_pzb_1000_13",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -1.2, 0.21, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 4, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1948,
+				yearTo = 1959,
+			},
+			category = { 
+				categories = { "Formsignal Einheitsbauform 8m", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Formsignal der Einheitsbauform mit mastblende und PZB ohne Rangiersignal. masthhe 8m. Aufgestellt als Esig, Bksig und Asig zwischen 1948 und 1959."),
+				name = _("Formsig 8m Hp0/Hp1 zs3: 80, pzb, 1 flgel, mastblende"),
+			},
+			formSignale = { 
+				bstg = false,
+				exot = false,
+				ra11 = false,
+				schmal = false,
+				sh1 = false,
+				side = "right",
+				signalPole = "false",
+				vkb = false,
+				waypoint = false,
+				weg = false,
+				zs1 = false,
+				zs3Zs3v = true,
+			},
+			signal = { 
+				type = "PATH_SIGNAL",
+			},
+		},
+		version = 2,
+	}
+end

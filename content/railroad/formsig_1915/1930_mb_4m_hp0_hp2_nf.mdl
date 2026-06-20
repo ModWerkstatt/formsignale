@@ -1,0 +1,112 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 4, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 4.5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -1.65, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/mast_4m_lod0.msh",
+							name = "mast_4m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/mastschild_4m_hp2_lod0.msh",
+							name = "mastschild_4m_hp2_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18, 0, 1.35, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/laterne_lod0.msh",
+							name = "laterne_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, 0.405, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -4, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/fluegel_oben_kurz_lod0.msh",
+							name = "fluegel_oben_kurz_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 4.096, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/stange_1_4m_lod0.msh",
+							name = "stange_1_4m_lod0_6",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 3.985, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben_lod0_7",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.085, 0.13, 3.5, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/fluegel_mitte_kurz_lod0.msh",
+							name = "fluegel_mitte_kurz_lod0_8",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.21, 0, 2.516, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/stange_2_4m_lod0.msh",
+							name = "stange_2_4m_lod0_9",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.11, 2.29, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", "mat/formsignal_glas_scheibe.mtl", },
+							mesh = "msh/scheibe_gruen_lod0.msh",
+							name = "scheibe_gruen_lod0_10",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.095, 0.13, 1.9, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/laterne_lod0.msh",
+							name = "laterne_lod0_11",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -1.205, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_lod0_12",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -5.6, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_kreuz.msh",
+							name = "Kreuz",
+							transf = { -1, 0, 0, 0, 0, 0.707, -0.707, 0, 0, 0.707, 0.707, 0, 0.14, 0.2, 4.1, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 3, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1930,
+				yearTo = 1948,
+			},
+		},
+		version = 2,
+	}
+end

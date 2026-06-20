@@ -1,0 +1,128 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 4, 0, 10.5, },
+			bbMin = { -1.1, -4, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 2.55, 2, 5.75, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -1.45, -0.15, 4.55, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/mast_6m_lod0.msh",
+							name = "mast_6m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 6.096, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_6m_lod0.msh",
+							name = "stange_1_6m_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 5.985, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_grau.mtl", },
+							mesh = "msh/fluegel_mitte_lod0.msh",
+							name = "fluegel_mitte_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.21, 0, 3.616, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_2_6m_lod0.msh",
+							name = "stange_2_6m_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.12, 3.38, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 3, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/mast_3_lod0.msh",
+							name = "mast_3_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/dreh.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/sperrsignal.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/scheibe_3_lod0.msh",
+							name = "scheibe_3_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.42, 0.05, 0.65, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1915,
+				yearTo = 1930,
+			},
+			category = { 
+				categories = { "Formsignal Einheitsbauform Weg 6m asig", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Formsignal der Einheitsbauform fr Wegesinaliesierung mit Negativ Flgel ohne mastblende und Rangiersignal. masthhe 6m. Aufgestellt als Asig zwischen 1915 und 1930."),
+				name = _("Formsig weg 6m asig Hp0/sh1, 2 flgel"),
+			},
+			formSignale = { 
+				bstg = false,
+				exot = false,
+				ra11 = false,
+				schmal = false,
+				sh1 = true,
+				side = "right",
+				signalPole = "false",
+				vkb = false,
+				waypoint = false,
+				weg = true,
+				zs1 = false,
+				zs3Zs3v = false,
+			},
+			signal = { 
+				type = "PATH_SIGNAL",
+			},
+		},
+		version = 2,
+	}
+end

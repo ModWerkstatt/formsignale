@@ -1,0 +1,151 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 4, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 4.5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -1.65, 5.65, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/mast_4m_lod0.msh",
+							name = "mast_4m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/fluegel_oben_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/fluegel_oben_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/fluegel_oben_kurz_lod0.msh",
+							name = "fluegel_oben_kurz_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 4.096, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/stange_1_4m_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_1_4m_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_4m_lod0.msh",
+							name = "stange_1_4m_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 3.985, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/fluegel_unten_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/fluegel_unten_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/fluegel_mitte_kurz_lod0.msh",
+							name = "fluegel_mitte_kurz_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.21, 0, 2.516, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/stange_2_4m_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_2_4m_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_2_4m_lod0.msh",
+							name = "stange_2_4m_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.11, 2.29, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 3, -2.15, 0.65, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1915,
+				yearTo = 1930,
+			},
+			category = { 
+				categories = { "Formsignal Einheitsbauform Weg 4m bstg", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Formsignal der Einheitsbauform fr Wegesinaliesierung ohne mastblende und Rangiersignal. masthhe 4m. Fr Bahnsteighhe 76cm ohne Bahnsteigdach. Aufgestellt als Esig, Bksig und Asig zwischen 1915 und 1930."),
+				name = _("Formsig weg 4m Hp0/Hp2, 2 flgel, 76cm bstg"),
+			},
+			formSignale = { 
+				bstg = true,
+				exot = false,
+				ra11 = false,
+				schmal = false,
+				sh1 = false,
+				side = "right",
+				signalPole = "false",
+				vkb = false,
+				waypoint = false,
+				weg = true,
+				zs1 = false,
+				zs3Zs3v = false,
+			},
+			signal = { 
+				type = "PATH_SIGNAL",
+			},
+		},
+		version = 2,
+	}
+end

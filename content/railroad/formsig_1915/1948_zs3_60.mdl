@@ -1,0 +1,64 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 4, 0, 10.5, },
+			bbMin = { -1.1, -4, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 2.55, 2, 5.75, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -1.45, -0.15, 4.55, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/mast_zs3_lod0.msh",
+							name = "mast_zs3_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/stange_lang_zs3_lod0.msh",
+							name = "stange_lang_zs3_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18448, -0.097037, 3.9078, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/kniegelenk_zs3_lod0.msh",
+							name = "kniegelenk_zs3_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.11905, -0.057457, 3.961, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/stange_kurz_zs3_lod0.msh",
+							name = "stange_kurz_zs3_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18162, -0.023998, 4.0356, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/form_zs3_6_lod0.msh",
+							name = "form_zs3_6_lod0_5",
+							transf = { 0.087, 0, -0.996, 0, 0, 1, 0, 0, 0.996, 0, 0.087, 0, 0.52273, 0, 3.9587, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2, -3, 0.3, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1948,
+				yearTo = 1959,
+			},
+		},
+		version = 2,
+	}
+end

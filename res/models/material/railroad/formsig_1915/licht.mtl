@@ -1,28 +1,32 @@
 function data()
-return {
-	order = 0,
-	params = {
-		emissive_scale = {
-			emissiveScale = { 12, 12, 12, },
+return { 
+		__version = "",
+		order = 0,
+		params = { 
+			emissive_scale = { 
+				fragmentProperties = {
+					{ 
+						emissiveScale = { 12, 12, 12, },
+					},
+				},
+			},
+			light_receiver = { 
+				fragmentProperties = {
+					{ 
+						isLegacyMaterial = true,
+						lightMask = 2,
+					},
+				},
+			},
+			map_emissive = { 
+				fragmentSamplers = { 
+					emissiveTex = { 
+						fileName = "res/textures/models/railroad/emissive/railroad_lights_all_colors.dds",
+						type = "TWOD",
+					},
+				},
+			},
 		},
-		fade_out_range = {
-			fadeOutEndDist = 20000,
-			fadeOutStartDist = 10000,
-		},
-		map_emissive = {
-			fileName = "models/railroad/emissive/railroad_lights_all_colors.dds",
-			type = "TWOD",
-		},
-		polygon_offset = {
-			factor = 0,
-			forceDepthWrite = false,
-			units = 0,
-		},
-		two_sided = {
-			flipNormal = true,
-			twoSided = false,
-		},
-	},
-	type = "EMISSIVE",
-}
+		type = "EMISSIVE",
+	}
 end

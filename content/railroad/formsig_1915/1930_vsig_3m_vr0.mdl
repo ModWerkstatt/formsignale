@@ -1,0 +1,82 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 4, 11, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 4.5, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -1.65, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", },
+							mesh = "msh/vorsignal_spiegelmast_3m_lod0.msh",
+							name = "vorsignal_spiegelmast_3m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", },
+							mesh = "msh/signalscheibe_vsig_lod0.msh",
+							name = "signalscheibe_vsig_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0698, 0, 3.257, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", },
+							mesh = "msh/stange_3m_vsig_lod0.msh",
+							name = "stange_3m_vsig_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0151, 0.112, 3.256, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", },
+							mesh = "msh/stange_2_vsig_lod0.msh",
+							name = "stange_2_vsig_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0527, -0.189, 3.164, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", },
+							mesh = "msh/hebel_vsig_lod0.msh",
+							name = "hebel_vsig_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", "mat/formsignal_vsig_glas.mtl", },
+							mesh = "msh/scheibe_rechts_gelb_vsig_lod0.msh",
+							name = "scheibe_rechts_gelb_vsig_lod0_6",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig_grau.mtl", "mat/formsignal_vsig_glas.mtl", },
+							mesh = "msh/scheibe_links_gelb_vsig_lod0.msh",
+							name = "scheibe_links_gelb_vsig_lod0_7",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 0, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_kreuz.msh",
+							name = "Kreuz",
+							transf = { -1, 0, 0, 0, 0, 0.707, -0.707, 0, 0, 0.707, 0.707, 0, 0.12, 0, 2.6, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, -2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1930,
+				yearTo = 1948,
+			},
+		},
+		version = 2,
+	}
+end

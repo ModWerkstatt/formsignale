@@ -1,0 +1,155 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 6, 4, 11, },
+			bbMin = { -1.1, 4, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.55, 0, 6, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -2.45, -1.85, 4.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/e_vorsignal_3m_lod0.msh",
+							name = "e_vorsignal_3m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/signalscheibe_vsig_lod0.msh",
+							name = "signalscheibe_vsig_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0698, 0, 3.257, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/stange_3m_vsig_lod0.msh",
+							name = "stange_3m_vsig_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0151, 0.112, 3.256, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/stange_2_vsig_lod0.msh",
+							name = "stange_2_vsig_lod0_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0527, -0.189, 3.164, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/hebel_vsig_lod0.msh",
+							name = "hebel_vsig_lod0_5",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							name = "licht_orange_vsig_lod0_6",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 2.592, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", "mat/formsignal_vsig_glas.mtl", },
+							mesh = "msh/scheibe_rechts_rg_vsig_lod0.msh",
+							name = "scheibe_rechts_rg_vsig_lod0_7",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 2.479, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							name = "licht_orange_vsig_lod0_8",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 1.825, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", "mat/formsignal_vsig_glas.mtl", },
+							mesh = "msh/scheibe_links_rg_vsig_lod0.msh",
+							name = "scheibe_links_rg_vsig_lod0_9",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.109, -0.011, 1.943, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_vsig.mtl", },
+							mesh = "msh/pfeil_vsig_lod0.msh",
+							name = "pfeil_vsig_lod0_10",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.164, -0.004, 1.98, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_pzb_1000.msh",
+							name = "ks_pzb_1000_11",
+							transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 3.14, 0.21, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 2.15, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/signaltafel.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/pfosten_kurz_lod0.msh",
+							name = "mast",
+							transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.6, 0, 0.1, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/vs_schild_lod0.msh",
+							name = "vs_schild_lod0_2",
+							transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.69, 0, 0.7, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/signaltafel.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/dreieck_lod0.msh",
+							name = "mast",
+							transf = { -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.6, 0, -0.95, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 2.15, -0.35, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1955,
+				yearTo = 1959,
+			},
+			category = { 
+				categories = { "Formsignal Vorsignal 3m", },
+			},
+			cost = { 
+				price = 3000,
+			},
+			description = { 
+				description = _("Form Vorsignal mit der masthhe 3m. Nicht zum Anbauen an ein Hauptsignal. Aufgestellt zwischen 1955 und 1959."),
+				name = _("Formsig Vsig 3m links Vr0/vr0 vkb, mit Pfeil"),
+			},
+			formSignale = { 
+				bstg = false,
+				exot = false,
+				ra11 = false,
+				schmal = false,
+				sh1 = false,
+				side = "left",
+				signalPole = "false",
+				vkb = true,
+				waypoint = true,
+				weg = false,
+				zs1 = false,
+				zs3Zs3v = false,
+			},
+			signal = { 
+				type = "WAYPOINT",
+			},
+		},
+		version = 2,
+	}
+end
