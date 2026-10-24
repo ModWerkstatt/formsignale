@@ -1,0 +1,22 @@
+{
+    "name": "Semaphore signals of the standard design 1915-1959",
+    "summary": "",
+    "description": "Semaphore signals are mechanical signals in which the signal aspects are represented by moving elements in daylight and by additional lights at night. The mod contains the form signals of the unit design that were first set up in 1915. In 1959 the last signal box with these signals was put into operation. Included are signals, waypoints and assets.",
+    "localization" : {
+        "de": {
+            "name": "Formsignale der Einheitsbauform 1915-1959",
+            "summary": "",
+            "description": "Formsignale sind mechanische Signale, bei denen die Signalbegriffe, bei Tageslicht durch bewegliche Elemente und bei Nacht durch zusätzliche Lichter dargestellt werden. Der Mod beinhaltet die Formsignale der Einheitsbauform die erstmal 1915 aufgestellt wurden. 1959 wurde das letzte Stellwerk mit diesen Signale in Betrieb genommen. Enthalten sind Signale, Wegpunkte und Assets."
+        }
+    },
+    "authors": [
+        {
+            "name": "Modwerkstatt",
+            "role": "CREATOR"
+        }
+    ],
+    "tags": [
+        "Signal"
+    ],
+    "url": "https://modwerkstatt.com/downloads/tpf3/formsignale"
+}

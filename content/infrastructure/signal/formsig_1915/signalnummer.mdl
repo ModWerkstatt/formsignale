@@ -1,0 +1,59 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 0.01, 0.15, 0.163586, },
+			bbMin = { -0.0402567, -0.15, -0.163586, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.0251284, 0.15, 0.163586, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.0151284, 0, 0, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc_2.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_signalnummer_tafel_lod0.msh",
+							name = "signalnummer",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/ks_signal_misc.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/ks_halter_schilder_lod0.msh",
+							name = "halter",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.01, 0.15, 0.163586, },
+				bbMin = { -0.0402567, -0.15, -0.163586, },
+			},
+			labelList = { 
+				labels = {
+					{ 
+						alignment = "CENTER",
+						childId = "RootNode",
+						color = { 0, 0, 0, },
+						size = { 10, 13, },
+						transf = { 0, -0.03, 0, 0, 0, 0, 0.03, 0, -0.03, 0, 0, 0, -0.02, 0.15, -0.15, 1, },
+						type = "NAME",
+						verticalAlignment = "CENTER",
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

@@ -1,0 +1,132 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 5.155, 2.0751, 5.3701, },
+			bbMin = { -0.223651, -1.3451, 0.15, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.304655, 1.10164, 2.27454, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.0810041, 0.706042, 2.42454, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mast_4m_brucke_lod0.msh",
+							name = "mast",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mastschild_4m_hp2_lod0.msh",
+							name = "mastschild",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18, 0, 1.35, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_rot_lod0.msh",
+							name = "licht_rot",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -4.09, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, 0.405, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -4, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 4.096, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_4m_lod0.msh",
+							name = "stange",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 3.985, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.085, 0.13, 3.5, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_mitte_kurz_lod0.msh",
+							name = "fluegel_mitte",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.21, 0, 2.516, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_2_4m_lod0.msh",
+							name = "stange2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.11, 2.29, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas_scheibe.mtl", },
+							mesh = "msh/scheibe_gelb_lod0.msh",
+							name = "scheibe_gelb",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.095, 0.13, 1.9, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.035, -0.045, -1.45, 5, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -5.6, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.385659, 1.80769, 4.69907, },
+				bbMin = { -0.223651, -0.395602, 0.15, },
+			},
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMin = 3,
+						color = { 0.886275, 0.0139023, 0.0139023, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_rot",
+						mode = "LIGHT",
+						radius = 5,
+						strength = 3,
+						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0.12, 0.41, 7.75, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

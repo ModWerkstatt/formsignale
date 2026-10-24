@@ -1,0 +1,40 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 0.0609883, 0.240632, 0.358447, },
+			bbMin = { -0.0603709, -0.239368, -0.161072, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.0606796, 0.24, 0.25976, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.000308709, 0.000632145, 0.0986874, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/signaltafel.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/dreieck_lod0.msh",
+							name = "vkb",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -2, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.0609883, 0.240632, 0.358447, },
+				bbMin = { -0.0603709, -0.239368, -0.161072, },
+			},
+		},
+		version = 2,
+	}
+end

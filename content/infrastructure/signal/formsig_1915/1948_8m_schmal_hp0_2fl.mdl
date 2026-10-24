@@ -1,0 +1,144 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 5.195, 2.0451, 9.6701, },
+			bbMin = { -0.393651, -1.3751, -2.3071, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.623314, 1.17886, 5.59936, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.229663, 0.628827, 3.29226, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/schmalmast_8m_lod0.msh",
+							name = "schmalmast",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mastschild_schmal_8m_hp2_lod0.msh",
+							name = "mastschild",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.8, 1, },
+						},
+						{ 
+							materials = { "mat/licht_e.mtl", },
+							mesh = "msh/licht_rot_lod0.msh",
+							name = "licht_rot",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 0.21, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.705, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 0.3, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 8.396, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_8m_schmal_lod0.msh",
+							name = "stange",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.12, -0.24, 8.295, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/gewicht_oben_schmal_lod0.msh",
+							name = "gewicht_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 4.345, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.8, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_mitte_lod0.msh",
+							name = "fluegel_mitte",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 5.916, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_2_8m_schmal_lod0.msh",
+							name = "stange_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.22, -0.11, 5.7, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/gewicht_unten_schmal_lod0.msh",
+							name = "gewicht_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.04, 0, 4.345, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas_scheibe.mtl", },
+							mesh = "msh/scheibe_gelb_lod0.msh",
+							name = "scheibe_gelb",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 5.3, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 2.205, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -2.2, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.852977, 1.80769, 8.89161, },
+				bbMin = { -0.393651, -0.550032, -2.3071, },
+			},
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMin = 3,
+						color = { 0.886275, 0.0139023, 0.0139023, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_rot",
+						mode = "LIGHT",
+						radius = 5,
+						strength = 3,
+						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0.08, 0.41, 7.75, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

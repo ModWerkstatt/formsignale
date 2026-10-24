@@ -1,0 +1,40 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 0.184702, 0.201137, 0.199761, },
+			bbMin = { -0.227014, -0.198863, -0.12258, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.205858, 0.2, 0.16117, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.0211563, 0.00113672, 0.0385909, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zs1_lod0.msh",
+							name = "zs1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.184702, 0.201137, 0.199761, },
+				bbMin = { -0.227014, -0.198863, -0.12258, },
+			},
+		},
+		version = 2,
+	}
+end

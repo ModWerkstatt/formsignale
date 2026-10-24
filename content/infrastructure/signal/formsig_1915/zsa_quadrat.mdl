@@ -1,0 +1,46 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 0.114686, 0.425169, 0.40275, },
+			bbMin = { -0.2614, -0.425169, -0.40275, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.188043, 0.425169, 0.40275, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.073357, -1.93715e-07, 0, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_lod0.msh",
+							name = "zsa",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/zsa_schirm_quadrat_lod0.msh",
+							name = "schirm",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.05, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.114686, 0.425169, 0.40275, },
+				bbMin = { -0.2614, -0.425169, -0.40275, },
+			},
+		},
+		version = 2,
+	}
+end

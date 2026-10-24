@@ -1,0 +1,144 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 1.07486, 1.25344, 4.66681, },
+			bbMin = { -0.95989, -1.25344, -0.76862, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.928058, 0.470733, 2.71772, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.146803, 0, 1.9491, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/mast_zs3_lod0.msh",
+							name = "mast",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_lang_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "ani/stange_lang_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/stange_lang_zs3_lod0.msh",
+							name = "stange_lang",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18448, -0.097037, 3.9078, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									forward = false,
+									params = { 
+										id = "ani/kniegelenk_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "ani/kniegelenk_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/kniegelenk_zs3_lod0.msh",
+							name = "kniegelenk",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.11905, -0.057457, 3.961, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_kurz_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "ani/stange_kurz_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/stange_kurz_zs3_lod0.msh",
+							name = "stange_kurz",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.18162, -0.023998, 4.0356, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									forward = false,
+									params = { 
+										id = "ani/dreieck_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "ani/dreieck_zs3.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_zs3.mtl", },
+							mesh = "msh/form_fw101_60_lod0.msh",
+							name = "fw101",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.52273, 0, 3.9587, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 1.07486, 0.470733, 4.66681, },
+				bbMin = { -0.781255, -0.470733, -0.76862, },
+			},
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMax = 40,
+						angleMin = 1,
+						color = { 1, 0.926131, 0.580392, },
+						invertMask = false,
+						lightId = "",
+						mask = 2,
+						meshId = "mast",
+						mode = "LIGHT",
+						radius = 1.95,
+						strength = 2,
+						transf = { -0.696706, 0, -0.717356, 0, 0, -1, 0, 0, -0.717356, 0, 0.696706, 0, 0.98, 0, 4.46, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = -1,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

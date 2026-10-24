@@ -1,0 +1,355 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 5.235, 2.0451, 11.6701, },
+			bbMin = { -0.393651, -1.3751, -2.3071, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.623314, 1.17886, 6.65553, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.229663, 0.628827, 4.34844, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/schmalmast_10m_lod0.msh",
+							name = "mast",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/mastschild_schmal_10m_hp2_lod0.msh",
+							name = "mastschild",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.4, 0, 2.7, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/licht_gelb.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/licht_gelb.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/licht_e.mtl", },
+							mesh = "msh/licht_rot_lod0.msh",
+							name = "licht_rot",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 2.21, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 6.705, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.065, 0, 2, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/fluegel_oben_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/fluegel_oben_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 10.396, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/stange_1_10m_schmal_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_1_10m_schmal_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_10m_schmal_lod0.msh",
+							name = "stange",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, -0.24, 10.295, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/gewicht_oben_8m_schmal_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/gewicht_oben_8m_schmal_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/gewicht_oben_schmal_lod0.msh",
+							name = "gewicht_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.04, 0, 6.345, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/scheibe_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/scheibe_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas.mtl", },
+							mesh = "msh/scheibe_oben_lod0.msh",
+							name = "scheibe_oben",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 9.8, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/licht_e.mtl", },
+							mesh = "msh/licht_gruen_lod0.msh",
+							name = "licht_gruen",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 2.21, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/fluegel_unten_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/fluegel_unten_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/fluegel_mitte_lod0.msh",
+							name = "fluegel_mitte",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.24, 0, 7.916, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/stange_2_10m_schmal_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/stange_2_10m_schmal_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_2_10m_schmal_lod0.msh",
+							name = "stange2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.22, -0.11, 7.7, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/gewicht_unten_8m_schmal_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/gewicht_unten_8m_schmal_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/gewicht_unten_schmal_lod0.msh",
+							name = "gewicht_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.04, 0, 6.345, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/scheibe_auf.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/scheibe_zu.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/formsignal.mtl", "mat/formsignal_glas_scheibe.mtl", },
+							mesh = "msh/scheibe_gelb_lod0.msh",
+							name = "scheibe_gelb",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.135, 0.1, 7.3, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/e_laterne_lod0.msh",
+							name = "laterne_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, 4.205, 1, },
+						},
+						{ 
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/laternenhalter_lod0.msh",
+							name = "laternenhalter_unten",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01, 0, -0.2, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "ani/licht_gruen.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mat/licht_e.mtl", },
+							mesh = "msh/licht_gelb_lod0.msh",
+							name = "licht_orange",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.115, -0.075, -0.291, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.852977, 1.80769, 11.004, },
+				bbMin = { -0.393651, -0.550032, -2.3071, },
+			},
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMin = 3,
+						color = { 0.886275, 0.0139023, 0.0139023, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_rot",
+						mode = "LIGHT",
+						radius = 5,
+						strength = 3,
+						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0.12, 0.41, 7.75, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+					{ 
+						angleMin = 3,
+						color = { 0, 0.47451, 0, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_gruen",
+						mode = "LIGHT",
+						radius = 5,
+						strength = 3,
+						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0.12, 0.41, 7.75, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+					{ 
+						angleMin = 3,
+						color = { 0.9, 0.5, 0.16, },
+						fadeOutStart = 700,
+						fromTime = 0,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_orange",
+						mode = "LIGHT",
+						radius = 5,
+						strength = 3,
+						toTime = 24,
+						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0.12, 0.41, 7.75, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

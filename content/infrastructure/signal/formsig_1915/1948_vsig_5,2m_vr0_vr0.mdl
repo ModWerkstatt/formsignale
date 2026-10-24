@@ -1,0 +1,162 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 3.35, 0.711945, 5.69696, },
+			bbMin = { -0.71066, -0.840945, -1.72463, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 0.590355, 0.504598, 3.58306, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.120305, 0.0153552, 1.85843, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/mast_lang_vs_lod0.msh",
+							name = "mast",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/mast_strecke.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/schirm_vs_lod0.msh",
+							name = "schirm",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.32, -0.02, 4.9367, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/on.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/on.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/licht.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/licht_vs_gelb_lod0.msh",
+							name = "licht_orange",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.35, -0.191, 5.17601, 1, },
+						},
+						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/on.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/on.ani",
+									},
+									type = "FILE_REF",
+								},
+							},
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/licht.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/licht_vs_gelb_lod0.msh",
+							name = "licht_orange2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.35, 0.32, 4.68, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = { 
+			extent = { 
+				bbMax = { 0.47005, 0.519953, 5.44148, },
+				bbMin = { -0.71066, -0.489243, -1.72463, },
+			},
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMax = 10,
+						angleMin = 3,
+						color = { 0, 0.47, 0, },
+						fadeOutStart = 700,
+						fromTime = 0,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_gruen",
+						mode = "LIGHT",
+						radius = 3,
+						strength = 2,
+						toTime = 24,
+						transf = { -1.00025, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+					{ 
+						angleMax = 10,
+						angleMin = 3,
+						color = { 0, 0.47, 0, },
+						fadeOutStart = 700,
+						fromTime = 0,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_gruen2",
+						mode = "LIGHT",
+						radius = 3,
+						strength = 2,
+						toTime = 24,
+						transf = { -1.00025, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+					{ 
+						angleMax = 10,
+						angleMin = 3,
+						color = { 0.9, 0.5, 0.16, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_orange",
+						mode = "LIGHT",
+						radius = 3,
+						strength = 2,
+						transf = { -1.00025, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+					{ 
+						angleMax = 10,
+						angleMin = 3,
+						color = { 0.9, 0.5, 0.16, },
+						fadeOutStart = 700,
+						invertMask = true,
+						lightId = "",
+						mask = 0,
+						meshId = "licht_orange2",
+						mode = "LIGHT",
+						radius = 3,
+						strength = 2,
+						transf = { -1.00025, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 300,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end
