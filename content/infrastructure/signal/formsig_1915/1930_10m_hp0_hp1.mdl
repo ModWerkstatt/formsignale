@@ -28,6 +28,21 @@ return {
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18, 0, 2.5, 1, },
 						},
 						{ 
+							animations = { 
+								green = { 
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
+									},
+									type = "FILE_REF",
+								},
+								red = { 
+									forward = false,
+									params = { 
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
+									},
+									type = "FILE_REF",
+								},
+							}, 
 							materials = { "mat/licht.mtl", },
 							mesh = "msh/licht_rot_lod0.msh",
 							name = "licht_rot",
@@ -111,15 +126,15 @@ return {
 						{ 
 							animations = { 
 								green = { 
+									forward = false,
 									params = { 
-										id = "ani/licht_gruen.ani",
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
 									},
 									type = "FILE_REF",
 								},
 								red = { 
-									forward = false,
 									params = { 
-										id = "ani/licht_gruen.ani",
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
 									},
 									type = "FILE_REF",
 								},
@@ -137,7 +152,49 @@ return {
 				visibleTo = 300,
 			},
 		},
-		metadata = { 
+		metadata = {
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMax = 10,
+						angleMin = 5,
+						color = { 0, 0.47, 0, },
+						fadeOutStart = 700,
+						fromTime = -1,
+						invertMask = false,
+						lightId = "",
+						mask = 2,
+						meshId = "licht_gruen",
+						mode = "LIGHT",
+						radius = 4,
+						strength = 3,
+						toTime = -1,
+						transf = { 0.985, 0, -0.174, 0, 0, 1, 0, 0, -0.174, 0, 0.985, 0, 0, 0.42, 7.775, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 800,
+					},
+					{ 
+						angleMax = 10,
+						angleMin = 5,
+						color = { 1.71, 0, 0, },
+						fadeOutStart = 700,
+						fromTime = -1,
+						invertMask = false,
+						lightId = "",
+						mask = 2,
+						meshId = "licht_rot",
+						mode = "LIGHT",
+						radius = 4,
+						strength = 3,
+						toTime = -1,
+						transf = { 0.985, 0, -0.174, 0, 0, 1, 0, 0, -0.174, 0, 0.985, 0, 0, 0.41, 7.775, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 800,
+					},
+				},
+			},
 		},
 		version = 2,
 	}

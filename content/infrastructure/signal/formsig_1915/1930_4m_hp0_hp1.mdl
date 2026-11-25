@@ -126,15 +126,15 @@ return {
 						{ 
 							animations = { 
 								green = { 
+									forward = false,
 									params = { 
-										id = "ani/licht_gruen.ani",
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
 									},
 									type = "FILE_REF",
 								},
-								red = { 
-									forward = false,
+								red = {
 									params = { 
-										id = "ani/licht_gruen.ani",
+										id = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/ani/licht.ani",
 									},
 									type = "FILE_REF",
 								},
