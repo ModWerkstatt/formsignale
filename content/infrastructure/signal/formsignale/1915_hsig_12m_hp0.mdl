@@ -1,0 +1,71 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 4, 0, 13, },
+			bbMin = { -1.1, -5, -1, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 2.55, 2.5, 7, },
+			},
+			transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -1.45, 0.35, 5.8, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/formsignal_weg.mtl", },
+							mesh = "msh/mast_12m_lod0.msh",
+							name = "mast_12m_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/fluegel_oben_lod0.msh",
+							name = "fluegel_oben_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.13, 0, 12.096, 1, },
+						},
+						{
+							materials = { "mat/formsignal.mtl", },
+							mesh = "msh/stange_1_12m_lod0.msh",
+							name = "stange_1_12m_lod0_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.145, -0.24, 12, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -0.2, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 300,
+			},
+		},
+		metadata = {
+			lightSourceList = { 
+				lights = {
+					{ 
+						angleMax = 10,
+						angleMin = 5,
+						color = { 1.71, 0, 0, },
+						fadeOutStart = 700,
+						fromTime = -1,
+						invertMask = false,
+						lightId = "",
+						mask = 2,
+						meshId = "licht_rot",
+						mode = "LIGHT",
+						radius = 4,
+						strength = 3,
+						toTime = -1,
+						transf = { 0.985, 0, -0.174, 0, 0, 1, 0, 0, -0.174, 0, 0.985, 0, 0, 0.41, 7.775, 1, },
+						type = "SPOT",
+						visibleFrom = -1,
+						visibleTo = 800,
+					},
+				},
+			},
+		},
+		version = 2,
+	}
+end

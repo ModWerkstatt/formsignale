@@ -46,28 +46,28 @@ return {
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
 						},
 						{ 
-							materials = { "mat/licht.mtl", },
-							mesh = "msh/licht_gelb_vsig_lod0.msh",
-							name = "licht_orange",
-							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 4.592, 1, },
-						},
-						{ 
 							materials = { "mat/formsignal_vsig.mtl", "mat/formsignal_vsig_glas.mtl", },
 							mesh = "msh/scheibe_rechts_gelb_vsig_lod0.msh",
 							name = "scheibe_rechts",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 2, 1, },
 						},
 						{ 
-							materials = { "mat/licht.mtl", },
-							mesh = "msh/licht_gelb_vsig_lod0.msh",
-							name = "licht_orange2",
-							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 3.825, 1, },
-						},
-						{ 
 							materials = { "mat/formsignal_vsig.mtl", "mat/formsignal_vsig_glas.mtl", },
 							mesh = "msh/scheibe_links_gelb_vsig_lod0.msh",
 							name = "scheibe_links",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 2, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							name = "licht_orange_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 4.592, 1, },
+						},
+						{ 
+							materials = { "mat/licht.mtl", },
+							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							name = "licht_orange_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 3.825, 1, },
 						},
 					},
 					name = "RootNode",
@@ -77,11 +77,7 @@ return {
 				visibleTo = 300,
 			},
 		},
-		metadata = { 
-			extent = { 
-				bbMax = { 0.356981, 0.480276, 5.68906, },
-				bbMin = { -0.299459, -0.480276, -1, },
-			},
+		metadata = {
 			lightSourceList = { 
 				lights = {
 					{ 
@@ -92,11 +88,11 @@ return {
 						invertMask = true,
 						lightId = "",
 						mask = 0,
-						meshId = "licht_orange",
+						meshId = "licht_orange_1",
 						mode = "LIGHT",
 						radius = 3,
 						strength = 2,
-						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
 						type = "SPOT",
 						visibleFrom = -1,
 						visibleTo = 300,
@@ -109,11 +105,11 @@ return {
 						invertMask = true,
 						lightId = "",
 						mask = 0,
-						meshId = "licht_orange2",
+						meshId = "licht_orange_2",
 						mode = "LIGHT",
 						radius = 3,
 						strength = 2,
-						transf = { 1.00025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.00025, 0, 0, 0, 0, 1, },
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
 						type = "SPOT",
 						visibleFrom = -1,
 						visibleTo = 300,

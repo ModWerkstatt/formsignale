@@ -46,8 +46,8 @@ return {
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.236, -0.087, 0.098, 1, },
 						},
 						{ 
-							materials = { "mat/licht.mtl", },
-							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/licht.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/licht_vs_gelb_lod0.msh",
 							name = "licht_orange_vsig_lod0_6",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, 0.205, 4.592, 1, },
 						},
@@ -58,8 +58,8 @@ return {
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.011, 2, 1, },
 						},
 						{ 
-							materials = { "mat/licht.mtl", },
-							mesh = "msh/licht_gelb_vsig_lod0.msh",
+							materials = { "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/mat/licht.mtl", },
+							mesh = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/msh/licht_vs_gelb_lod0.msh",
 							name = "licht_orange_vsig_lod0_8",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.1, -0.225, 3.825, 1, },
 						},

@@ -69,11 +69,10 @@ function data()
             {
 			    key = "mw_form_type",
 			    name = _("Masttyp"),
-			    values = { _("Hauptsignal"), _("Vorsignal"), },
+			    values = { _("Hauptsignal"), _("Vorsignal"), _("Vsig am Hsig")},
 			    defaultIndex = 1,
 			    tooltip = _("tooltip_type"),
-                uiType = "Button",
-                displayMode = "Horizontal",
+                uiType = "ComboBox",
                 postConstructionModifiable = true,
 		    },
             {
@@ -84,6 +83,29 @@ function data()
 			    tooltip = _("tooltip_height"),
                 uiType = "Button",
                 postConstructionModifiable = true,
+                checkEnabledScript = {
+            	    fileName = "script/hauptsignal_construction.script@checkEnabledFn",
+                    params = {
+               	        key = "mw_form_type",
+                        threshold = 1,
+                    },
+                },
+		    },
+            {
+			    key = "mw_form_vs_height",
+			    name = _("Masthöhe"),
+			    values = { _("3m"), _("5m"), },
+			    defaultIndex = 1,
+			    tooltip = _("tooltip_height"),
+                uiType = "Button",
+                postConstructionModifiable = true,
+                checkEnabledScript = {
+            	    fileName = "script/vorsignal_construction.script@checkEnabledFn",
+                    params = {
+               	        key = "mw_form_type",
+                        threshold = 2,
+                    },
+                },
 		    },
 		    {
 			    key = "mw_form_booms",
@@ -164,6 +186,13 @@ function data()
                 postConstructionModifiable = true,
                 group = "generalParams",
                 displayMode = "Horizontal",
+                checkEnabledScript = {
+            	    fileName = "mw_signalkomponenten::/infrastructure/signal/mw_signalkomponenten/script/oneway_construction.script@checkEnabledFn",
+                    params = {
+               	        key = "mw_form_waypoint",
+                        threshold = 1,
+                    },
+                },
             },
             {
 				key = "mw_form_offset_x",

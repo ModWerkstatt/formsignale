@@ -23,18 +23,13 @@ return {
 						},
 					},
 					name = "RootNode",
-					transf = { -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
 				},
 				visibleFrom = 0,
-				visibleTo = 300,
+				visibleTo = 150,
 			},
 		},
-		metadata = { 
-			extent = { 
-				bbMax = { 0.184702, 0.201137, 0.199761, },
-				bbMin = { -0.227014, -0.198863, -0.12258, },
-			},
-		},
+		metadata = { },
 		version = 2,
 	}
 end
